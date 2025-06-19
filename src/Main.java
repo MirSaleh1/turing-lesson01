@@ -11,6 +11,7 @@ public class Main{
         int c=scanner.nextInt();
        double d= (a+b+c)/3;
         System.out.println("Task:1");
+        System.out.println("#####################################");
         System.out.println(d);
         if(a>40 && b>40 && c>40){
             if(d>85 && a>85 && b>85 && c>85){
@@ -30,6 +31,7 @@ public class Main{
             System.out.println("Kəsildiniz - Bir və ya bir neçə imtahan balı çox aşağıdır.");
         }
         System.out.println("Task:2");
+        System.out.println("#####################################");
         int f=scanner.nextInt();
         switch (f){
             case 1:
@@ -46,6 +48,7 @@ public class Main{
                 System.out.println("Yanlış seçim. Zəhmət olmasa 1 ilə 5 arasında bir nömrə daxil edin.");break;
         }
         System.out.println("Task:3");
+        System.out.println("#####################################");
         int u=scanner.nextInt();
         for(;u<11;u++){
             for(int i=0;i<11;i++){
