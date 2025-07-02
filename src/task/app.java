@@ -23,10 +23,10 @@ public class app {
                     System.out.println("Your balans are : "+balans1);
                     break;
                     case 2:double balans2 = balans11(salary,username);
-                    System.out.println("teze balansiniz : "+balans2);
+                    yoxlama(balans2);
                     break;
                     case 3:balans2 = balans12(salary,username);
-                        System.out.println("teze balansiniz : "+balans2);
+                       yoxlama(balans2);
                         break;
                     case 4: String ad=ad(username);
                         System.out.println("teze adiniz : "+ad);
@@ -145,6 +145,13 @@ public class app {
             }
         }
         return null;
+    }
+    public static void yoxlama(double a){
+        if(a>0) {
+            System.out.println("teze balansiniz : "+a);
+        } else if (a>0) {
+            System.out.println("teze balansiniz : "+a);
+        }
     }
         }
 
