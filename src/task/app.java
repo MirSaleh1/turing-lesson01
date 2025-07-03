@@ -23,10 +23,10 @@ public class app {
                     System.out.println("Your balans are : "+balans1);
                     break;
                     case 2:double balans2 = balans11(salary,username);
-                    yoxlama(balans2);
+                        System.out.println("teze balansiniz : "+balans2);
                     break;
                     case 3:balans2 = balans12(salary,username);
-                       yoxlama(balans2);
+                        System.out.println("teze balansiniz : "+balans2);
                         break;
                     case 4: String ad=ad(username);
                         System.out.println("teze adiniz : "+ad);
@@ -61,6 +61,7 @@ public class app {
        String ad= sc.nextLine();
        for(int i=0;i<a.length;i++) {
            if (a[i].equals(ad)) {
+
                        return b[i];
                    }
 
@@ -77,13 +78,16 @@ public class app {
 
                double balans1=balans(c,b);
 
-            if(balans1!=0&&balans1>0){
+            if(balans1>0){
                 System.out.println("ne qeder daxil etmek isteyirsiniz");
                 int d = sc.nextInt();
 
                if(d>0) {
 
                    balans1 = balans1 + d;
+                for (int i = 0; i < b.length; i++) {
+                   b[i] =  balans1;
+                }
                    return balans1;
                }else {
                    System.out.println("pul daxil edilmedi");
@@ -110,6 +114,9 @@ public class app {
             if(d>0&&d<balans1) {
 
                 balans1 = balans1 - d;
+                for (int i = 0; i < b.length; i++) {
+                    b[i] =  balans1;
+                }
                 return balans1;
             }else {
                 System.out.println("pul goture bilmediniz");
@@ -146,13 +153,7 @@ public class app {
         }
         return null;
     }
-    public static void yoxlama(double a){
-        if(a>0) {
-            System.out.println("teze balansiniz : "+a);
-        } else if (a>0) {
-            System.out.println("teze balansiniz : "+a);
-        }
-    }
+
         }
 
 
