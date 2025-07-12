@@ -1,9 +1,6 @@
-package task;
-import Class.Product;
-import Class.Store;
+package Class;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class StoreandProductsManagementApp {
     public static void main(String[] args) {
@@ -27,6 +24,7 @@ public class StoreandProductsManagementApp {
         price[3]= p4.price;
         System.out.println(store);
         store.pplyDiscountToAll();
+
 
         String expensiveProduct= Store.printExpensiveProduct(price,product);
         System.out.println("expensive"+ ":"+expensiveProduct);
