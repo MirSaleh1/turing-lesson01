@@ -1,5 +1,8 @@
 package task;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class StrangeApp2 {
@@ -37,5 +40,42 @@ public class StrangeApp2 {
         System.out.println(g1);
         System.out.println(g);
         System.out.println(d);
+
+        System.out.println("###########################################");
+
+        int property=input.nextInt();
+        int revurse=0;
+        int orginal=property;
+        while(property!=0) {
+            int price=property%10;
+
+
+            if(property<0){
+
+                break;
+            }
+
+            else {
+
+                revurse=revurse*10+price;
+                property=property/10;
+            }
+
+            }
+        if (revurse==orginal) {
+            System.out.println("this number is a polinom");
+        }else  {
+            System.out.println("this number is not a polinom");
+        }
+
+
+        }
+
+
+
+
+
+
     }
-}
+
+
