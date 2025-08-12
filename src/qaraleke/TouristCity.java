@@ -1,27 +1,26 @@
-package task03;
+package qaraleke;
 
 public class TouristCity extends City{
     private int annualVisitors;
     private String mainAttraction;
     private double annualTourismRevenue;
 
-    public TouristCity(int id, String name, long population, boolean isCapital, double area, Country country,int annualVisitors, String mainAttraction, double annualTourismRevenue) {
-        super(id, name, population, isCapital, area, country);
+    public  TouristCity(int id, String name, long population, boolean isCapital, double area,Counrty counrty,int annualVisitors,String mainAttraction,double annualTourismRevenue) {
+        super(id,name,population,isCapital,area, counrty);
         this.annualVisitors = annualVisitors;
         this.mainAttraction = mainAttraction;
         this.annualTourismRevenue = annualTourismRevenue;
     }
-
     public int getAnnualVisitors() {
         return annualVisitors;
     }
 
-    public String getMainAttraction() {
-        return mainAttraction;
-    }
-
     public double getAnnualTourismRevenue() {
         return annualTourismRevenue;
+    }
+
+    public String getMainAttraction() {
+        return mainAttraction;
     }
 
     public void setAnnualVisitors(int annualVisitors) {

@@ -1,28 +1,27 @@
-package task03;
+package qaraleke;
 
 public class CapitalCity extends City{
     private String governmentType;
     private int parliamentMembers;
-    private String mayorName;
+    private String mayorname;
 
-    public  CapitalCity(int id, String name, long population, boolean isCapital, double area, Country country,String governmentType,int parliamentMembers,String mayorName) {
-        super(id, name, population, isCapital, area, country);
+    public  CapitalCity(int id, String name, long population, boolean isCapital, double area,Counrty counrty,String governmentType, int parliamentMembers, String mayorname) {
+        super(id, name, population, isCapital, area, counrty);
         this.governmentType = governmentType;
         this.parliamentMembers = parliamentMembers;
-        this.mayorName = mayorName;
+        this.mayorname = mayorname;
+    }
 
+    public String getGovernmentType() {
+        return governmentType;
     }
 
     public int getParliamentMembers() {
         return parliamentMembers;
     }
 
-    public String getMayorName() {
-        return mayorName;
-    }
-
-    public String getGovernmentType() {
-        return governmentType;
+    public String getMayorname() {
+        return mayorname;
     }
 
     public void setGovernmentType(String governmentType) {
@@ -33,7 +32,7 @@ public class CapitalCity extends City{
         this.parliamentMembers = parliamentMembers;
     }
 
-    public void setMayorName(String mayorName) {
-        this.mayorName = mayorName;
+    public void setMayorname(String mayorname) {
+        this.mayorname = mayorname;
     }
 }

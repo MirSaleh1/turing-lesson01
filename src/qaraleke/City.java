@@ -1,27 +1,23 @@
-package task03;
+package qaraleke;
 
 public class City {
-    public boolean governmentType;
     private int id;
     private String name;
     private long population;
     private boolean isCapital;
     private double area;
-    private Country country;
-    private City[] globalcities;
-public City(){
+    private Counrty counrty;
 
-}
-public City(City []globalcities){
-    this.globalcities=globalcities;
-}
-    public City(int id, String name, long population, boolean isCapital, double area, Country country) {
+    public City(int id, String name, long population, boolean isCapital, double area,Counrty counrty) {
         this.id = id;
         this.name = name;
         this.population = population;
         this.isCapital = isCapital;
         this.area = area;
-        this.country = country;
+        this.counrty = counrty;
+    }
+    public City(){
+
     }
 
     public int getId() {
@@ -44,10 +40,6 @@ public City(City []globalcities){
         return area;
     }
 
-    public Country getCountry() {
-        return country;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -68,23 +60,33 @@ public City(City []globalcities){
         this.area = area;
     }
 
-    public void setCountry(Country country) {
-        this.country = country;
+    public Counrty getCounrty() {
+        return counrty;
     }
 
-    public City[] getGlobalcities() {
-        return globalcities;
+    public void setCounrty(Counrty counrty) {
+        this.counrty = counrty;
+    }
+    public City[]addCity(City city) {
+        City[] globalCities=new City[100];
+        for (int i = 0; i < globalCities.length; i++) {
+            if(globalCities[i]==null){
+                globalCities[i]=city;
+            }
+
+        }
+        return globalCities;
     }
 
-    public void setGlobalcities(City city,String name,City []globalcities) {
-    this.globalcities=globalcities;
-       for(int i=0;i<globalcities.length;i++){
-           if(globalcities[i]==city){
-               city.setName(name);
-
-           }
-           }
-       }
+    @Override
+    public String toString() {
+        return "task03.City{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", population=" + population +
+                ", isCapital=" + isCapital +
+                ", area=" + area +
+                ", counrty=" + counrty +
+                '}';
     }
-
-
+}
