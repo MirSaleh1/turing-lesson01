@@ -1,5 +1,7 @@
 package tasks05;
 
+import java.util.Arrays;
+
 public class Course {
     private String courseCode;
     private String courseName;
@@ -85,5 +87,20 @@ public class Course {
     public static Course creatCourse(String courseCode, String courseName, Teacher teacher) {
         Course course = new Course(courseCode, courseName, teacher);
         return course;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseCode='" + courseCode + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", teacher=" + teacher +
+                ", students=" + Arrays.toString(students) +
+                ", assignments=" + Arrays.toString(assignments) +
+                ", submissions=" + Arrays.toString(submissions) +
+                ", studentCount=" + studentCount +
+                ", assigmentCount=" + assigmentCount +
+                ", submissionCount=" + submissionCount +
+                '}';
     }
 }
