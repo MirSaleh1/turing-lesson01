@@ -102,7 +102,7 @@ public class Course {
         if (done){
             studentsStrings=studentsString.toString();
         }
-        return studentsString.toString();
+        return studentsStrings;
     }
     public String assignmentsToString() {
         StringBuilder assignmentsString = new StringBuilder();
@@ -118,7 +118,7 @@ public class Course {
         if (done){
             assignmentsStrings=assignmentsString.toString();
         }
-        return assignmentsString.toString();
+        return assignmentsStrings;
     }
     public String submissionsToString() {
         StringBuilder submissionsString = new StringBuilder();
@@ -134,7 +134,7 @@ public class Course {
         if (done){
             submissionsStrings=submissionsString.toString();
         }
-        return submissionsString.toString();
+        return submissionsStrings;
     }
 
     @Override
