@@ -70,7 +70,7 @@ public class Student extends User {
                 dashboard.append(",");
             }
             dashboard.append("}");
-
+            System.out.println(dashboard.toString());
         }else  {
             dashboard.append("{you don't have any courses }");
         }

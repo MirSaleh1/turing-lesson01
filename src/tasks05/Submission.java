@@ -1,5 +1,7 @@
 package tasks05;
 
+import java.util.Objects;
+
 public class Submission {
     private Student student;
     private Assignment assignment;
@@ -46,5 +48,27 @@ public class Submission {
         } else {
             System.out.println("Grade must be between 0 and 100");
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Submission that = (Submission) o;
+        return Double.compare(grade, that.grade) == 0 && Objects.equals(student, that.student) && Objects.equals(assignment, that.assignment) && Objects.equals(submissionContent, that.submissionContent);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(student, assignment, submissionContent, grade);
+    }
+
+    @Override
+    public String toString() {
+        return "Submission{" +
+                "student=" + student +
+                ", assignment=" + assignment +
+                ", submissionContent='" + submissionContent + '\'' +
+                ", grade=" + grade +
+                '}';
     }
 }

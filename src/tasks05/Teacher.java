@@ -1,5 +1,7 @@
 package tasks05;
 
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Teacher extends User {
@@ -59,11 +61,50 @@ public class Teacher extends User {
                 dashboard.append(",");
             }
             dashboard.append("}");
-
+            System.out.println(dashboard.toString());
         }else  {
             dashboard.append("{you don't have any courses }");
         }
         System.out.println(dashboard.toString());
 
+    }public String coursesToString(){
+        StringBuilder coursesString =new StringBuilder();
+        String coursesStrings="you don't have any courses";
+
+            boolean done = false;
+            for (int i = 0; i < createdCourseIndex; i++) {
+                coursesString.append("{");
+                coursesString.append(createdCourses[i].toString());
+                coursesString.append(", ");
+                done = true;
+            }
+            coursesString.append("}");
+            if (done){
+                coursesStrings=coursesString.toString();
+            }
+            return coursesStrings;
+        }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Teacher teacher = (Teacher) o;
+        return createdCourseIndex == teacher.createdCourseIndex && Objects.equals(department, teacher.department) && Objects.deepEquals(createdCourses, teacher.createdCourses);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), department, Arrays.hashCode(createdCourses), createdCourseIndex);
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "department='" + department + '\'' +
+                ", createdCourses=" + coursesToString()  +
+                ", createdCourseIndex=" + createdCourseIndex +
+                '}';
     }
 }
