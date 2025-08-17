@@ -88,6 +88,54 @@ public class Course {
         Course course = new Course(courseCode, courseName, teacher);
         return course;
     }
+    public String studentsToString() {
+        StringBuilder studentsString = new StringBuilder();
+        String studentsStrings = "this cours doesn't has students";
+        boolean done = false;
+        for (int i = 0; i < studentCount; i++) {
+            studentsString.append("{");
+            studentsString.append(students[i].toString());
+            studentsString.append(", ");
+            done = true;
+        }
+        studentsString.append("}");
+        if (done){
+            studentsStrings=studentsString.toString();
+        }
+        return studentsString.toString();
+    }
+    public String assignmentsToString() {
+        StringBuilder assignmentsString = new StringBuilder();
+        String assignmentsStrings = "this cours doesn't has students";
+        boolean done = false;
+        for (int i = 0; i < assigmentCount; i++) {
+            assignmentsString.append("{");
+            assignmentsString.append(assignments[i].toString());
+            assignmentsString.append(", ");
+            done = true;
+        }
+        assignmentsString.append("}");
+        if (done){
+            assignmentsStrings=assignmentsString.toString();
+        }
+        return assignmentsString.toString();
+    }
+    public String submissionsToString() {
+        StringBuilder submissionsString = new StringBuilder();
+        String submissionsStrings = "this cours doesn't has students";
+        boolean done = false;
+        for (int i = 0; i < submissionCount; i++) {
+            submissionsString.append("{");
+            submissionsString.append(submissions[i].toString());
+            submissionsString.append(", ");
+            done = true;
+        }
+        submissionsString.append("}");
+        if (done){
+            submissionsStrings=submissionsString.toString();
+        }
+        return submissionsString.toString();
+    }
 
     @Override
     public String toString() {
@@ -95,9 +143,9 @@ public class Course {
                 "courseCode='" + courseCode + '\'' +
                 ", courseName='" + courseName + '\'' +
                 ", teacher=" + teacher +
-                ", students=" + Arrays.toString(students) +
-                ", assignments=" + Arrays.toString(assignments) +
-                ", submissions=" + Arrays.toString(submissions) +
+                ", students=" + studentsToString() +
+                ", assignments=" + assignmentsToString() +
+                ", submissions=" +  submissionsToString() +
                 ", studentCount=" + studentCount +
                 ", assigmentCount=" + assigmentCount +
                 ", submissionCount=" + submissionCount +
