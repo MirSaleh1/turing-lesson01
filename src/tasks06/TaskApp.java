@@ -21,7 +21,7 @@ public class TaskApp {
         boolean done=false;
         while(!done){
         System.out.println("Please log in or create an account if you don't have one.");
-        System.out.println("for login press one for create press two");
+        System.out.println("     for login press one for create press two    " );
         int choice = input.nextInt();
         switch(choice) {
             case 1:
