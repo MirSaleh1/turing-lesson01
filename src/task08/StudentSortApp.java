@@ -135,7 +135,13 @@ public class StudentSortApp {
     }
 
     public static void showAllStudents(Student[] students) {
+
+        int index = 1;
+
         for(Student student : students){
+
+            student.setRealId(index);
+            index++;
             System.out.println(student);
         }
     }

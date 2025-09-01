@@ -8,6 +8,7 @@ public class Student implements Comparable<Student>, Comparator<Student> {
     private int age;
     private static int id=0;
     private int realId=0;
+    private int realRealId=0;
     private String fatherName;
     private String motherName;
     private String surname;
@@ -28,6 +29,7 @@ public class Student implements Comparable<Student>, Comparator<Student> {
         this.single = single;
         id = id+1;
         realId=id;
+        realRealId=id;
     }
 
     public String getName() {
@@ -101,9 +103,16 @@ public class Student implements Comparable<Student>, Comparator<Student> {
     public void setSingle(boolean single) {
         this.single = single;
     }
+    public int getRealId() {
+        return realId;
+    }
+
+    public void setRealId(int realId) {
+        this.realId = realId;
+    }
     @Override
     public int compareTo(Student o) {
-        return Integer.compare(this.realId,o.realId);
+        return Integer.compare(this.realRealId,o.realRealId);
     }
 
     @Override
@@ -138,6 +147,7 @@ public class Student implements Comparable<Student>, Comparator<Student> {
                 ", single=" + single +
                 '}';
     }
+
 
 
 }
