@@ -66,8 +66,8 @@ public class StudentSortApp {
 
     public static void sortByName(Student[] students) {
 
-        System.out.println("do you want to sort Name for Acs or Dcsc?");
-        String answer = input.nextLine();
+        String answer=  repost();
+
         if (answer.equalsIgnoreCase("Acs")) {
             Arrays.sort(students, new StudentNameComparator());
 
@@ -87,9 +87,7 @@ public class StudentSortApp {
 
     public static void sortByAge(Student[] students) {
 
-        System.out.println("do you want to sort  height for Acs or Dcsc?");
-
-        String answer = input.nextLine();
+      String answer=  repost();
 
         if (answer.equalsIgnoreCase("Acs")) {
             Arrays.sort(students, new StudentAgeComparator());
@@ -109,8 +107,7 @@ public class StudentSortApp {
 
     public static void sortByHeight(Student[] students) {
 
-        System.out.println("do you want to sort  height for Acs or Dcsc?");
-        String answer = input.nextLine();
+        String answer=  repost();
 
         if (answer.equalsIgnoreCase("Acs")) {
 
@@ -144,6 +141,12 @@ public class StudentSortApp {
             index++;
             System.out.println(student);
         }
+    }
+    public static String repost(){
+        System.out.println("do you want to sort  height for Acs or Dcsc?");
+
+        String answer = input.nextLine();
+        return answer;
     }
 
     public static void randomSort(Student[] students) {
