@@ -24,6 +24,7 @@ public class TestApp {
     }
 
        */
+
         Dog[] dogs = new Dog[3];
         Object [] objects = dogs;
 
@@ -41,5 +42,16 @@ public class TestApp {
             System.out.println(animal);
 
         }
+        if (objects[0] instanceof Cat) {
+            //Cat c =  objects[0]; Bu xeta verir xeta verme sebebini basa dusurem amma bu sehdise niye yuxardakinda sehv olur
+            Cat c2 = (Cat) objects[0];
+        }
     }
+
+    Dog dog=new Dog("qiz",17,"canavar");
+
+    //Cat cat =(Cat) dog; iki classdada eyni filedler var amma cast zamani xeta verir
+
+
+
 }
